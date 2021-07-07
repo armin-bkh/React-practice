@@ -1,14 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// import App from './App';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const titleHeader = <h1 className="title">Hello World</h1>;
-ReactDOM.render(
-  titleHeader,
-  document.getElementById('root')
+// const titleHeader = <h1 className="title">Hello World</h1>;
+// ReactDOM.render(
+//   titleHeader,
+//   document.getElementById('root')
+// );
+
+
+ReactDOM.render(<App content="Armin"/>,
+  document.getElementById('header')
 );
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
