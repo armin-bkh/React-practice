@@ -11,7 +11,7 @@ import reportWebVitals from './reportWebVitals';
 // );
 
 
-ReactDOM.render(<App content="Armin"/>,
+ReactDOM.render(<App name="Armin" age="17" />,
   document.getElementById('header')
 );
 
