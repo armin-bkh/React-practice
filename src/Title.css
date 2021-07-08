@@ -1,7 +1,7 @@
 .title{
     text-align: center;
     color: magenta;
-  }
+}
   
   .explain{
     width: 100%;
@@ -10,5 +10,10 @@
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    background: #aaa;
-  }
+}
+
+.btn{
+  padding: 5px 15px;
+  border: 1px magenta solid;
+  cursor: pointer;
+}

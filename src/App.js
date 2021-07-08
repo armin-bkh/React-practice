@@ -135,26 +135,35 @@ class Navbar extends React.Component {
     super(props);
     this.state = {
       name: "Armin",
-      age: 17
+      age: 17,
+      show: true
     }
+  }
+  delElement = () => {
+    this.setState({show: false});
   }
   render(){
     let obj = {
       col1: 'red',
       col2: 'blue'
   };
+  var title;
+  if(this.state.show){
+    title = <Title name={this.state.name} age={this.state.age} obj={obj} />;
+  }
   return (
     <React.Fragment>
       <nav className="navbar">
-        <h3 className="logo">{this.state.name}</h3>
+        <h3 className="logo" id="logo">{this.state.name}</h3>
         <ul className="navbar-nav">
           <li><a href="#">Home</a></li>
           <li><a href="#">Contact</a></li>
           <li><a href="#">About us</a></li>
           <li><a href="#">Login</a></li>
         </ul>
+      <button className="btn" type="button" onClick={this.delElement}>Delete</button>
       </nav>
-      <Title name={this.state.name} age={this.state.age} obj={obj}/>
+      {title}
     </React.Fragment>
   )
   }
