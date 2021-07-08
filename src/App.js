@@ -134,8 +134,8 @@ class Navbar extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      name: this.props.name,
-      age: this.props.age
+      name: "Armin",
+      age: 17
     }
   }
   render(){

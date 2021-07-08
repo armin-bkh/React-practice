@@ -48,11 +48,20 @@ class Title extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      name: this.props.name,
-      age: this.props.age,
-      colorR: this.props.obj.col1,
-      colorB: this.props.obj.col2
+      name: "Reza",
+      age: "24",
+      colorR: "yellow",
+      colorB: "orange"
     };
+  }
+  static getDerivedStateFromProps(props, state){
+    return {name: props.name};
+  }
+  componentDidMount(){
+    setTimeout(()=> this.setState({
+      colorB: "White",
+      colorR: "black"
+    }),3000);
   }
   render(){
   return (
