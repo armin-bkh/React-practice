@@ -58,7 +58,7 @@ class Title extends React.Component{
   static getDerivedStateFromProps(props, state){
     return {
       name: props.name,
-      age: "24"
+      // age: "24"
     };
   }
   componentDidMount(){
@@ -72,9 +72,9 @@ class Title extends React.Component{
   shouldComponentUpdate(){
     return true;
   }
-  changeAge = () =>{
+  changeAge = (a) =>{
     this.setState({
-      age: 17,
+      age: a,
       colorR: "magenta"
     });
   }
@@ -92,7 +92,7 @@ class Title extends React.Component{
     <article className="explain">
     <h1 className="title">i am {this.state.name} and i am {this.state.age} years old</h1>
     <h3 className="title">my favorite color is {this.state.colorR}  and i hate {this.state.colorB}</h3>
-    <button className="btn" type="button" onClick={this.changeAge}>click me</button>
+    <button className="btn" type="button" onClick={()=> this.changeAge(17)}>click me</button>
     </article>
   )
 }
