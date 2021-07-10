@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import './index.scss';
+import Singup from './App';
+import Title from './Title';
 import reportWebVitals from './reportWebVitals';
 
 // const titleHeader = <h1 className="title">Hello World</h1>;
@@ -11,7 +12,7 @@ import reportWebVitals from './reportWebVitals';
 // );
 
 
-ReactDOM.render(<App name="Armin" age="17" />,
+ReactDOM.render(<Singup />,
   document.getElementById('header')
 );
 

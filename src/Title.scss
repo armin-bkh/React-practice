@@ -1,19 +1,19 @@
 .title{
-    text-align: center;
-    color: magenta;
+  text-align: center;
+  color: magenta;
 }
-  
-  .explain{
-    width: 100%;
-    height: 93vh;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
+
+.explain{
+  width: 100%;
+  height: 93vh;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn{
-  padding: 5px 15px;
-  border: 1px magenta solid;
-  cursor: pointer;
+padding: 5px 15px;
+border: 1px magenta solid;
+cursor: pointer;
 }

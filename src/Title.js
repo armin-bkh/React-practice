@@ -54,6 +54,7 @@ class Title extends React.Component{
       colorR: "yellow",
       colorB: "orange"
     };
+    // this.changeAge = this.changeAge.bind(this);
   }
   static getDerivedStateFromProps(props, state){
     return {
@@ -72,7 +73,8 @@ class Title extends React.Component{
   shouldComponentUpdate(){
     return true;
   }
-  changeAge = (a) =>{
+  changeAge = (a, event) =>{
+    alert(event.type);
     this.setState({
       age: a,
       colorR: "magenta"
@@ -92,7 +94,8 @@ class Title extends React.Component{
     <article className="explain">
     <h1 className="title">i am {this.state.name} and i am {this.state.age} years old</h1>
     <h3 className="title">my favorite color is {this.state.colorR}  and i hate {this.state.colorB}</h3>
-    <button className="btn" type="button" onClick={()=> this.changeAge(17)}>click me</button>
+    {/* <button className="btn" type="button" onClick={this.changeAge.bind(this , 17)}>click me</button> */}
+    <button className="btn" type="button" onClick={(event)=>this.changeAge(17, event)}>click me</button>
     </article>
   )
 }
