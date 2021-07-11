@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Temperature from './Temperature';
 import './index.scss';
-import Singup from './App';
-import Title from './Title';
+// import Singup from './App';
+// import Title from './Title';
 import reportWebVitals from './reportWebVitals';
 
 // const titleHeader = <h1 className="title">Hello World</h1>;
@@ -12,9 +13,10 @@ import reportWebVitals from './reportWebVitals';
 // );
 
 
-ReactDOM.render(<Singup />,
-  document.getElementById('header')
-);
+ReactDOM.render(<Temperature />, document.getElementById('root'));
+
+
+
 
 
 // If you want to start measuring performance in your app, pass a function
