@@ -219,7 +219,7 @@ class Singup extends React.Component{
           <option value="ford">ford</option>
           <option value="bmw">bmw</option>
           <option value="benz">benz</option>
-        </select>'
+        </select>
         <textarea value={this.state.detail} name="detail" onChange={this.changeHandler} />
         <button type="submit" onChang={this.submitHandler}>submit</button>
       </form>
