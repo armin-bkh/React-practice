@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import Temperature from './Temperature';
-import Title from './composition'
+// import Title from './composition';
+import Routing from './Routing';
 import './index.scss';
 // import Singup from './App';
 // import Title from './Title';
@@ -19,7 +20,11 @@ import reportWebVitals from './reportWebVitals';
 
 
 
-ReactDOM.render(<Title />, document.getElementById('root'));
+// ReactDOM.render(<Title />, document.getElementById('root'));
+
+
+
+ReactDOM.render(<Routing />, document.getElementById('root'));
 
 
 
