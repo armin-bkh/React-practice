@@ -3,6 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+.active{
+    background-color: burlywood;
+}
 .menu{
     display: flex;
     align-items: center;
