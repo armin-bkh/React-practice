@@ -1,0 +1,51 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(231, 231, 231);
+}
+form{
+    background-color: rgb(238, 238, 238);
+    box-shadow: inset 5px 5px 15px rgb(80, 80, 80),
+                inset -5px -5px 15px #fff;
+    padding: 50px;
+    border-radius: 2rem;
+    .title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #000;
+    }
+    .btn{
+        display: block;
+        border: none;
+        outline: none;
+        padding: 5px 15px;
+        border-radius: 15px;
+        cursor: pointer;
+        border-bottom: 2px solid #000;
+        font-weight: bold;
+
+        &:active{
+            background: #000;
+            color: #fff;
+        }
+    }
+    .lbl{
+        font-size: 1.5rem;
+        margin-right: 10px;
+    }
+    .inp{
+        width: 15rem;
+        display: block;
+        margin: 5px 0;
+        padding: 10px 5px;
+        border: none;
+        outline: none;
+        background: transparent;
+        border-radius: 5px;
+        box-shadow: inset 2px 2px 5px rgb(80, 80, 80),
+                inset -2px -2px 5px #fff;
+    }
+}
