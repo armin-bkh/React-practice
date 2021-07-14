@@ -4,7 +4,8 @@ import ReactDOM from 'react-dom';
 // import Title from './composition';
 // import Routing from './Routing';
 // import Todolist from './Todolist';
-import Mycontainer from './AddElement';
+// import Mycontainer from './AddElement';
+import ContextCon from './ContextCon';
 import './index.scss';
 // import Singup from './App';
 // import Title from './Title';
@@ -32,8 +33,12 @@ import reportWebVitals from './reportWebVitals';
 // ReactDOM.render(<Todolist />, document.getElementById('root'));
 
 
-ReactDOM.render(<Mycontainer />, document.getElementById('root'));
+// ReactDOM.render(<Mycontainer />, document.getElementById('root'));
 
+
+
+
+ReactDOM.render(<ContextCon />, document.getElementById('root'));
 
 
 
