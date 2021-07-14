@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import Temperature from './Temperature';
+import Temperature from './Temperature';
 // import Title from './composition';
 // import Routing from './Routing';
-import TodoList from './Todolist';
+// import Todolist from './Todolist';
 import './index.scss';
 // import Singup from './App';
 // import Title from './Title';
@@ -16,7 +16,7 @@ import reportWebVitals from './reportWebVitals';
 // );
 
 
-// ReactDOM.render(<Temperature />, document.getElementById('root'));
+ReactDOM.render(<Temperature />, document.getElementById('root'));
 
 
 
@@ -28,7 +28,7 @@ import reportWebVitals from './reportWebVitals';
 // ReactDOM.render(<Routing />, document.getElementById('root'));
 
 
-ReactDOM.render(<TodoList />, document.getElementById('root'));
+// ReactDOM.render(<Todolist />, document.getElementById('root'));
 
 
 
