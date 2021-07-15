@@ -6,7 +6,8 @@ import ReactDOM from 'react-dom';
 // import Todolist from './Todolist';
 // import Mycontainer from './AddElement';
 // import ContextCon from './ContextCon';
-import ErrorApp from './ErrorApp.jsx';
+// import ErrorApp from './ErrorApp.jsx';
+import MyForm from './MyForm.jsx';
 import './index.scss';
 // import Singup from './App';
 // import Title from './Title';
@@ -43,10 +44,14 @@ import reportWebVitals from './reportWebVitals';
 
 
 
-ReactDOM.render(<ErrorApp />, document.getElementById('root'));
+// ReactDOM.render(<ErrorApp />, document.getElementById('root'));
+
+
+ReactDOM.render(<MyForm />, document.getElementById('root'));
 
 
 
+ 
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
