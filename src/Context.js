@@ -1,8 +1,5 @@
 import React from 'react';
 
-const UseContext = React.createContext('hello');
-const UseProvider = UseContext.Provider;
-const UseConsumer = UseContext.Consumer;
-
-// export default {UseProvider, UseConsumer};
-export default UseContext;
+export const UseContext = React.createContext('default value');
+export const UseProvider = UseContext.Provider;
+export const UseConsumer = UseContext.Consumer;
