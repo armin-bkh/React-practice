@@ -5,7 +5,8 @@ import ReactDOM from 'react-dom';
 // import Routing from './Routing';
 // import Todolist from './Todolist';
 // import Mycontainer from './AddElement';
-import ContextCon from './ContextCon';
+// import ContextCon from './ContextCon';
+import ErrorApp from './ErrorApp.jsx';
 import './index.scss';
 // import Singup from './App';
 // import Title from './Title';
@@ -38,7 +39,12 @@ import reportWebVitals from './reportWebVitals';
 
 
 
-ReactDOM.render(<ContextCon />, document.getElementById('root'));
+// ReactDOM.render(<ContextCon />, document.getElementById('root'));
+
+
+
+ReactDOM.render(<ErrorApp />, document.getElementById('root'));
+
 
 
 
