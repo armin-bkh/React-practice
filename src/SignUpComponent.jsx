@@ -13,6 +13,7 @@ class SignUp extends Component{
         }
     }
     submitHandler = (e) =>{
+        // e.preventDefault();
         e.preventDefault();
         const errmessage = this.state.err;
         const nameval = this.state.inputnameRef.current.getValue();
