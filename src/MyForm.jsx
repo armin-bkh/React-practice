@@ -7,11 +7,13 @@ class MyForm extends Component{
     constructor(props){
         super(props);
         this.state = {
-            title: 'signUp',
+            fildes: [],
+            title: 'signUp'
         }
     }
     submitHandler = (e) =>{
        e.preventDefault();
+        let newlist;
     }
     render(){
         return(

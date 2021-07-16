@@ -27,7 +27,9 @@ form{
     backdrop-filter: blur(5px);
     border-radius: 2rem;
     box-shadow: inset 10px 10px 33px #262520,
-                inset 10px 10px 33px #3b3b39;
+                inset 15px 15px 33px #3b3b39,
+                inset -10px -10px 33px #3b3b39;
+    font-family: sans-serif;
 
     .signupHeader{
         padding: 2rem 1rem;
@@ -35,6 +37,7 @@ form{
     
         .title{
             font-size: 2rem;
+            font-weight: bold;
         }
     }
     
@@ -55,6 +58,8 @@ form{
             outline: none;
             color: $textfore;
             background-color: $bodybg;
+            box-shadow: inset 5px 5px 5px #313131,
+                        inset -5px -5px 5px rgb(20, 20, 20);
         }
     }
     
@@ -79,7 +84,12 @@ form{
 
             a{
                 color: $textfore;
-                font-size: 1.5rem;
+                font-size: 1.2rem;
+                transition: all .1s;
+
+                &:hover{
+                    color: $bodybg;
+                }
             }
         }
     }

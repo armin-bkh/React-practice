@@ -14,6 +14,10 @@ class Error extends Component{
     static getDerivedStateFromProps(props, state){
         return{child: props.children}
     }
+    componentDidCatch(err, info){
+        console.log(err);
+        console.log(info);
+    }
     render(){
         if(this.state.Error){
             return (<h1>We have a same Error</h1>)

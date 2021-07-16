@@ -7,7 +7,9 @@ import ReactDOM from 'react-dom';
 // import Mycontainer from './AddElement';
 // import ContextCon from './ContextCon';
 // import ErrorApp from './ErrorApp.jsx';
-import MyForm from './MyForm.jsx';
+// import MyForm from './MyForm.jsx';
+import RefContainer from './RefContainer';
+
 import './index.scss';
 // import Singup from './App';
 // import Title from './Title';
@@ -47,7 +49,12 @@ import reportWebVitals from './reportWebVitals';
 // ReactDOM.render(<ErrorApp />, document.getElementById('root'));
 
 
-ReactDOM.render(<MyForm />, document.getElementById('root'));
+
+// ReactDOM.render(<MyForm />, document.getElementById('root'));
+
+
+
+ReactDOM.render(<RefContainer />, document.getElementById('root'));
 
 
 
