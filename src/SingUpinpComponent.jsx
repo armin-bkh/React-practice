@@ -10,6 +10,7 @@ class SignUpinp extends Component {
       HTMLFor: "",
       lbl: "",
       value: "",
+      ref: React.createRef()
     };
   }
   static getDerivedStateFromProps(props, state) {
@@ -26,7 +27,11 @@ class SignUpinp extends Component {
         value: e.target.value
     });
   }
+  getValue = () =>{
+    return this.state.ref.current.value;
+  }
   render() {
+    const state = this.state;
     return (
       <React.Fragment>
         <label className="lbl" htmlFor={this.state.HTMLFor}>
@@ -39,6 +44,7 @@ class SignUpinp extends Component {
           id={this.state.id}
           name={this.state.name}
           onChange={this.changeHandler}
+          ref={state.ref}
         />
       </React.Fragment>
     );

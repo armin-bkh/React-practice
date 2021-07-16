@@ -6,23 +6,17 @@ import './MyForm.scss';
 class MyForm extends Component{
     constructor(props){
         super(props);
-        this.state = {
-            fildes: [],
-            title: 'signUp'
-        }
     }
-    submitHandler = (e) =>{
-       e.preventDefault();
-        let newlist;
-    }
+    // submitHandler = (e) =>{
+    //     e.preventDefault();
+    // }
     render(){
         return(
-            <form onSubmit={this.submitHandler} method="POST">
+            <form>
                 <header className="signupHeader">
                     <h1 className="title">Create account</h1>
                 </header>
                 <SignUp />
-                <button className="btn" type="submit">SingUp</button>
                 <footer className="signupFooter">
                     <Router>
                         <h5 className="subTitle"> <Link to="#">Do you have account?</Link> </h5>

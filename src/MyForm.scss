@@ -1,6 +1,7 @@
 $bodybg: #262520;
 $formbg: #fff;
 $textfore: #aba3ab;
+$alert: #797878;
 
 *{
     padding: 0;
@@ -61,20 +62,25 @@ form{
             box-shadow: inset 5px 5px 5px #313131,
                         inset -5px -5px 5px rgb(20, 20, 20);
         }
+        .message{
+            display: inline-block;
+            margin: .5rem 0 0;
+            font-weight: bold;
+        }
+        .btn{
+            font-size: 1.5rem;
+            padding: 10px 15px;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            background-color: $bodybg;
+            width: 100%;
+            border-radius: 10px;
+            margin: 3rem 0 1rem;
+            color: $textfore;
+        }
     }
     
-    .btn{
-        font-size: 1.5rem;
-        padding: 10px 15px;
-        cursor: pointer;
-        border: none;
-        outline: none;
-        background-color: $bodybg;
-        width: 100%;
-        border-radius: 10px;
-        margin: 3rem 0 1rem;
-        color: $textfore;
-    }
     
     .signupFooter{
         padding: 1rem;
