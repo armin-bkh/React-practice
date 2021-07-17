@@ -44,39 +44,74 @@ import { tryConvert } from './Convertor';
 
 // export default Temperature;
 
+// class Temperature extends Component{
+//     constructor(){
+//         super();
+//         this.state = {
+//             temp: '',
+//             scale: ''
+//         }
+//     }
+//     changecHandler = (temp) =>{
+//         this.setState({
+//             scale: 'c',
+//             temp: temp
+//         });
+//     }
+//     changefHandler = (temp) =>{
+//         this.setState({
+//             scale: 'f',
+//             temp: temp
+//         });
+//     }
+//     render(){
+//         const tempreature = this.state.temp;
+//         const scale = this.state.scale;
+//         let celcious = scale === 'c' ? tempreature : tryConvert(tempreature, toCelsius);
+//         let fahrenheit = scale === 'f' ? tempreature : tryConvert(tempreature, toFahrenheit);
+//         return (
+//             <div>
+//                 <TemperatureInput temp={celcious} scale='c' changeTemp={this.changecHandler} />
+//                 <br />
+//                 <TemperatureInput temp={fahrenheit} scale='f' changeTemp={this.changefHandler} />
+//             </div>
+//         )
+//     }
+// }
+
+
 class Temperature extends Component{
     constructor(){
         super();
         this.state = {
-            temp: '',
-            scale: ''
+            sacle: '',
+            temp: ''
         }
     }
-    changecHandler = (temp) =>{
+    changeTempC = (temperature) =>{
         this.setState({
             scale: 'c',
-            temp: temp
-        });
+            temp: temperature
+        })
     }
-    changefHandler = (temp) =>{
+    changeTempF = (temperature) =>{
         this.setState({
             scale: 'f',
-            temp: temp
-        });
+            temp: temperature
+        })
     }
     render(){
-        const tempreature = this.state.temp;
+        const temp = this.state.temp;
         const scale = this.state.scale;
-        let celcious = scale === 'c' ? tempreature : tryConvert(tempreature, toCelsius);
-        let fahrenheit = scale === 'f' ? tempreature : tryConvert(tempreature, toFahrenheit);
-        return (
-            <div>
-                <TemperatureInput temp={celcious} scale='c' changeTemp={this.changecHandler} />
-                <br />
-                <TemperatureInput temp={fahrenheit} scale='f' changeTemp={this.changefHandler} />
-            </div>
+        const celcious = scale === 'c' ? temp : tryConvert(temp, toCelsius) ;
+        const fahrenheit = scale === 'f' ? temp : tryConvert(temp, toFahrenheit) ;
+        return(
+        <div>
+            <TemperatureInput val={celcious} scale="c" change={this.changeTempC} />
+            <br />
+            <TemperatureInput val={fahrenheit} scale="f" change={this.changeTempF} />
+        </div>
         )
     }
 }
-
 export default Temperature;

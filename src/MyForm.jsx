@@ -1,12 +1,16 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import SignUp from './SignUpComponent';
+import ErrorBoundary from './ErrorBoundary';
 import './MyForm.scss';
 
 class MyForm extends Component{
     constructor(props){
         super(props);
         // this.signupComponent = React.createRef();
+        this.state = {
+            error: "ali"
+        }
     }
     // submitHandler = (e) =>{
     //     e.preventDefault();
@@ -14,11 +18,12 @@ class MyForm extends Component{
     // }
     render(){
         return(
+            <ErrorBoundary>
             <form>
                 <header className="signupHeader">
                     <h1 className="title">Create account</h1>
                 </header>
-                <SignUp ref={this.signupComponent}/>
+                <SignUp ref={this.signupComponent} />
                 {/* <SignUp ref={this.signupComponent}/> */}
                 {/* <button className="btn" type="submit" onClick={this.submitHandler}>SingUp</button> */}
                 <footer className="signupFooter">
@@ -27,6 +32,7 @@ class MyForm extends Component{
                     </Router>
                 </footer>
             </form>
+            </ErrorBoundary>
         )
     }
 }

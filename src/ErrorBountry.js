@@ -4,12 +4,12 @@ class Error extends Component{
     constructor(){
         super();
         this.state = {
-            Error: false,
+            error: false,
             child: ''
         }
     }
     static getDerivedStateFromError(err){
-        return{Error: true}
+        return{error: true}
     }
     static getDerivedStateFromProps(props, state){
         return{child: props.children}
@@ -19,11 +19,11 @@ class Error extends Component{
         console.log(info);
     }
     render(){
-        if(this.state.Error){
+        if(this.state.error){
             return (<h1>We have a same Error</h1>)
         }
         return (
-            this.props.children
+            this.state.child
         )
     }
 }

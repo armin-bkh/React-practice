@@ -26,9 +26,13 @@ class SignUpinp extends Component {
     this.setState({
         value: e.target.value
     });
+    this.state.ref.current.style.border = "none";
   }
   getValue = () =>{
     return this.state.ref.current.value;
+  }
+  changeBorderHandler = (color) =>{
+    this.state.ref.current.style.border = color;
   }
   render() {
     const state = this.state;

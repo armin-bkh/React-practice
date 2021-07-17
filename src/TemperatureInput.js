@@ -26,38 +26,60 @@ import  ReactDOM  from 'react-dom';
 // } 
 // export default TemperatureInput;
 
-const Unit = {
-    c: "celcious",
-    f: "fahrenheit"
-}
-class TempratureInput extends Component{
+// const Unit = {
+//     c: "celcious",
+//     f: "fahrenheit"
+// }
+// class TempratureInput extends Component{
+//     constructor(props){
+//         super(props);
+//         this.state = {
+//             scale: '',
+//             temp: '',
+//             func: ''
+//         }
+//     }
+//     static getDerivedStateFromProps(props, state){
+//         return{
+//             scale: props.scale,
+//             temp: props.temp,
+//             func: props.changeTemp
+//         }
+//     }
+//     changeHandler = (e) =>{
+//         this.state.func(e.target.value);
+//     }
+//     render(){
+//         let value = this.state.temp;
+//         let scale = this.state.scale;
+//         return(
+//             <React.Fragment>
+//                 <label>{Unit[scale]}</label>
+//                 <input type="text" value={value} onChange={this.changeHandler} />
+//             </React.Fragment>
+//         )
+//     }
+// }
+
+
+class TemperatureInput extends Component{
     constructor(props){
         super(props);
-        this.state = {
-            scale: '',
-            temp: '',
-            func: ''
-        }
-    }
-    static getDerivedStateFromProps(props, state){
-        return{
-            scale: props.scale,
-            temp: props.temp,
-            func: props.changeTemp
+        this.Unit = {
+            c: 'Celcious',
+            f: 'fahrenheit'
         }
     }
     changeHandler = (e) =>{
-        this.state.func(e.target.value);
+        this.props.change(e.target.value);
     }
     render(){
-        let value = this.state.temp;
-        let scale = this.state.scale;
         return(
             <React.Fragment>
-                <label>{Unit[scale]}</label>
-                <input type="text" value={value} onChange={this.changeHandler} />
+                <label>{this.Unit[this.props.scale]}</label>
+                <input type="text" value={this.props.val} onChange={this.changeHandler}/>
             </React.Fragment>
         )
     }
 }
-export default TempratureInput;
+export default TemperatureInput;
