@@ -123,13 +123,15 @@ class Todolist extends Component {
   render() {
     let items = this.state.list.map((item) => {
       return (
-        <Todoitem
-          id={item.key}
-          val={item.value}
-          key={item.key}
-          check={item.checked}
-          checkUpdate={this.checkupdateHandler}
-        />
+        // <React.Fragment key={item.key}>
+          <Todoitem
+            id={item.key}
+            val={item.value}
+            key={item.key}
+            check={item.checked}
+            checkUpdate={this.checkupdateHandler}
+          />
+        // </React.Fragment>
       );
     });
     return (

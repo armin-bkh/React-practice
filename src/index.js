@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import Appcomponent from './Pure';
+import MemoComponent from './ChildPure';
 // import Temperature from './Temperature';
 // import Title from './composition';
 // import Routing from './Routing';
@@ -7,8 +9,11 @@ import ReactDOM from 'react-dom';
 // import Mycontainer from './AddElement';
 // import ContextCon from './ContextCon';
 // import ErrorApp from './ErrorApp.jsx';
-import MyForm from './MyForm.jsx';
+// import MyForm from './MyForm.jsx';
 // import RefContainer from './RefContainer';
+// import HOCApp from './HOCcomponent';
+// import Fragment from './Fragement';
+
 
 import './index.scss';
 // import Singup from './App';
@@ -50,11 +55,28 @@ import reportWebVitals from './reportWebVitals';
 
 
 
-ReactDOM.render(<MyForm />, document.getElementById('root'));
+// ReactDOM.render(<MyForm />, document.getElementById('root'));
 
 
 
 // ReactDOM.render(<RefContainer />, document.getElementById('root'));
+
+
+// ReactDOM.render(<HOCApp />, document.getElementById('root'));
+
+
+
+// ReactDOM.render(<Fragment />, document.getElementById('root')); 
+
+
+
+// ReactDOM.render(<Appcomponent />, document.getElementById('root'));
+
+
+
+
+ReactDOM.render(<MemoComponent />, document.getElementById('root'));
+
 
 
 
