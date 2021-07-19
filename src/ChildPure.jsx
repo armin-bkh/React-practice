@@ -11,6 +11,7 @@ import React, { PureComponent, useState } from "react";
 //         )
 //     }
 // }
+// export default ChildPure;
 
 // const ChildPure = ({ update }) => {
 //   console.log("ChildPure", update);
@@ -19,63 +20,49 @@ import React, { PureComponent, useState } from "react";
 
 // export default React.memo(ChildPure);
 
-// class MemoComponent extends PureComponent {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       //   update: 1,
-//       update: false,
-//     };
-//   }
-//   componentDidMount() {
-//     setInterval(() => {
-//       //   if (this.state.update <= 10) {
-//       //     this.setState((prevState) => {
-//       //       return { update: prevState.update + 1 };
-//       //     });
-//       //   }
-//     //   this.setState((prevState) => {
-//     //     return { update: !prevState.update };
-//     //   });
-//       this.setState({ update: true });
-//     }, 3500);
-//   }
-//   render() {
-//       console.log('updated');
-//     return (
-//       <>
-//         <h1>Hello World {this.state.update}</h1>
-//         <p>
-//           fqerifjdsnvsldueriopmdkvnkdfhkaldsakmavlautiehtkfladslfjweoj
-//           fdasfsdfasdfsdfsdfasdgdfhryrtjfgbcxvdteryrtjghfgfdgdfgdfgdfgree
-//           nbvnlpl[rieowur9uriowej24iou732ueiojnvcxnvmsldajd;akfjdiupwerui
-//           mvcxklvjqwleji12u49uiaosdmlmxz;xakdksaofjidjshjvnxcjkghduydfsfu
-//         </p>
-//       </>
-//     );
-//   }
-// }
-
-// export default React.memo(MemoComponent);
-
-const MemoComponent = () => {
-  const [ update, setUpdate ] = useState("reza");
-  setInterval(() => {
-    setUpdate("hamid")
-  }, 3500);
-  console.log("updated");
-  return (
-    <>
-      <h1>Hello {update}</h1>
-      <p>
-        fqerifjdsnvsldueriopmdkvnkdfhkaldsakmavlautiehtkfladslfjweoj
-        fdasfsdfasdfsdfsdfasdgdfhryrtjfgbcxvdteryrtjghfgfdgdfgdfgdfgree
-        nbvnlpl[rieowur9uriowej24iou732ueiojnvcxnvmsldajd;akfjdiupwerui 
-        mvcxklvjqwleji12u49uiaosdmlmxz;xakdksaofjidjshjvnxcjkghduydfsfu
-      </p>
-    </>
-  );
-};
+const  MemoComponent = ({props}) => {
+    const [Update, setUpdate] = useState(false); 
+    // const [Update, setUpdate] = useState(1);
+    setInterval(() => {
+      setUpdate(true);
+      // setUpdate(!Update);
+      // setUpdate(Update + 1);
+    }, 3500);
+    console.log('updated');
+    return (
+      <>
+        <h1>Hello World {Update}</h1>
+        <p>
+          fqerifjdsnvsldueriopmdkvnkdfhkaldsakmavlautiehtkfladslfjweoj
+          fdasfsdfasdfsdfsdfasdgdfhryrtjfgbcxvdteryrtjghfgfdgdfgdfgdfgree
+          nbvnlpl[rieowur9uriowej24iou732ueiojnvcxnvmsldajd;akfjdiupwerui
+          mvcxklvjqwleji12u49uiaosdmlmxz;xakdksaofjidjshjvnxcjkghduydfsfu
+        </p>
+      </>
+    )
+    
+}
 
 export default React.memo(MemoComponent);
+
+// const MemoComponent = () => {
+//   const [ update, setUpdate ] = useState("reza");
+//   setInterval(() => {
+//     setUpdate("hamid")
+//   }, 3500);
+//   console.log("updated");
+//   return (
+//     <>
+//       <h1>Hello {update}</h1>
+//       <p>
+//         fqerifjdsnvsldueriopmdkvnkdfhkaldsakmavlautiehtkfladslfjweoj
+//         fdasfsdfasdfsdfsdfasdgdfhryrtjfgbcxvdteryrtjghfgfdgdfgdfgdfgree
+//         nbvnlpl[rieowur9uriowej24iou732ueiojnvcxnvmsldajd;akfjdiupwerui 
+//         mvcxklvjqwleji12u49uiaosdmlmxz;xakdksaofjidjshjvnxcjkghduydfsfu
+//       </p>
+//     </>
+//   );
+// };
+
+// export default React.memo(MemoComponent);
 // export default MemoComponent;

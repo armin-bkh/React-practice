@@ -1,7 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import Appcomponent from './Pure';
-import MemoComponent from './ChildPure';
 // import Temperature from './Temperature';
 // import Title from './composition';
 // import Routing from './Routing';
@@ -13,6 +11,11 @@ import MemoComponent from './ChildPure';
 // import RefContainer from './RefContainer';
 // import HOCApp from './HOCcomponent';
 // import Fragment from './Fragement';
+// import Appcomponent from './Pure';
+// import MemoComponent from './ChildPure';
+import PRender from './PropsRender';
+// import PortalC from './PortalExecute';
+// import MyBtnModal from './MyBtnModal';
 
 
 import './index.scss';
@@ -74,8 +77,18 @@ import reportWebVitals from './reportWebVitals';
 
 
 
+// ReactDOM.render(<MemoComponent />, document.getElementById('root'));
 
-ReactDOM.render(<MemoComponent />, document.getElementById('root'));
+
+
+ReactDOM.render(<PRender/>, document.getElementById('root'));
+
+
+// ReactDOM.render(<PortalC/>, document.getElementById('root'));
+
+
+// ReactDOM.render(<MyBtnModal />, document.getElementById('root'));
+
 
 
 
