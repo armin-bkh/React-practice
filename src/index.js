@@ -13,9 +13,11 @@ import ReactDOM from 'react-dom';
 // import Fragment from './Fragement';
 // import Appcomponent from './Pure';
 // import MemoComponent from './ChildPure';
-import PRender from './PropsRender';
+// import PRender from './PropsRender';
 // import PortalC from './PortalExecute';
 // import MyBtnModal from './MyBtnModal';
+// import Fetch from './FetchGET';
+import AxiosApp from './Axios';
 
 
 import './index.scss';
@@ -81,7 +83,7 @@ import reportWebVitals from './reportWebVitals';
 
 
 
-ReactDOM.render(<PRender/>, document.getElementById('root'));
+// ReactDOM.render(<PRender/>, document.getElementById('root'));
 
 
 // ReactDOM.render(<PortalC/>, document.getElementById('root'));
@@ -90,9 +92,10 @@ ReactDOM.render(<PRender/>, document.getElementById('root'));
 // ReactDOM.render(<MyBtnModal />, document.getElementById('root'));
 
 
+// ReactDOM.render(<Fetch />, document.getElementById('root'));
 
 
-
+// ReactDOM.render(<AxiosApp />, document.getElementById('root'))
  
 
 // If you want to start measuring performance in your app, pass a function
